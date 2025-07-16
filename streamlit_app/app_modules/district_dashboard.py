@@ -269,7 +269,7 @@ def show():
     st.subheader("Change in Class Observation Scores (Dumbbell Chart)")
 
     # Connect
-    con = duckdb.connect("../data/interim/aggregation.duckdb")
+    con = duckdb.connect(DB_PATH)
 
     # Query data
     sql = """
