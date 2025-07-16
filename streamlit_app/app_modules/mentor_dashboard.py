@@ -3,6 +3,11 @@ import streamlit as st
 import duckdb
 import pandas as pd
 import plotly.express as px
+import os
+
+# Always compute BASE_DIR relative to this file
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DB_PATH = os.path.join(BASE_DIR, "data", "interim", "aggregation.duckdb")
 
 def show():
     st.header("👨‍🏫 Mentor Dashboard")
@@ -13,7 +18,7 @@ def show():
     )
 
     # Connect
-    con = duckdb.connect("../data/interim/aggregation.duckdb")
+    con = duckdb.connect(DB_PATH)
 
     # Mentor selection
     mentors_df = con.execute("""

@@ -3,6 +3,11 @@ import duckdb
 import plotly.express as px
 import pandas as pd
 import plotly.graph_objects as go
+import os
+
+# Always compute BASE_DIR relative to this file
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DB_PATH = os.path.join(BASE_DIR, "data", "interim", "aggregation.duckdb")
 
 def show():
     st.header("🏢 District Dashboard")
@@ -11,7 +16,7 @@ def show():
     col1, col2 = st.columns(2)
     
     # Database connection
-    con = duckdb.connect("../data/interim/aggregation.duckdb")
+    con = duckdb.connect(DB_PATH)
     
     # Query data
     df = con.execute("""
@@ -47,7 +52,7 @@ def show():
     # SECOND VISUALIZATION: Input Score Totals by Block and Quarter
 
     # connect to DuckDB
-    con2 = duckdb.connect("../data/interim/aggregation.duckdb")
+    con2 = duckdb.connect(DB_PATH)
 
     # Read pre-aggregated table
     sql = """
@@ -122,7 +127,7 @@ def show():
     st.subheader("📈 Attendance, Enrollment, and Student-Teacher Ratio Trends")
 
     # Connect to DuckDB
-    con3 = duckdb.connect("../data/interim/aggregation.duckdb")
+    con3 = duckdb.connect(DB_PATH)
 
     # Query the table
     sql = """
@@ -197,7 +202,7 @@ def show():
     st.subheader("📊 Teacher Performance Scores Heatmap")
 
     # Connect to aggregation DB
-    con4 = duckdb.connect("../data/interim/aggregation.duckdb")
+    con4 = duckdb.connect(DB_PATH)
 
     # Fetch the summarized data
     sql = """
