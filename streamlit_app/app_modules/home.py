@@ -4,10 +4,9 @@ import duckdb
 import pandas as pd
 import plotly.express as px
 import os
+from pathlib import Path
 
-# Always compute BASE_DIR relative to this file
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB_PATH = os.path.join(BASE_DIR, "data", "interim", "aggregation.duckdb")
+DB_PATH = Path("data/interim/aggregation.duckdb")
 
 def show():
     st.subheader("Key Indicators")
