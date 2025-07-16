@@ -9,6 +9,9 @@ data/*
 !data/interim/aggregation.duckdb
 !data/interim/enrichment.duckdb
 
+# Ignore all csv file in data/interim
+data/interim/*.csv
+
 # Ignore everything in resources
 resources/*
 
