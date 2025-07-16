@@ -1,6 +1,14 @@
 # Virtual environment
 .venv/
 
+# Ignore everything in data
+data/*
+
+# But keep these DuckDB databases
+!data/interim/
+!data/interim/aggregation.duckdb
+!data/interim/enrichment.duckdb
+
 # Jupyter Notebooks
 *.ipynb
 notebooks/

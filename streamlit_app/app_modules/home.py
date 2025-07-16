@@ -31,13 +31,13 @@ def show():
         st.metric("Total School Visits", int(summary_row["total_visits"]))
         st.metric("Data Start Date", str(summary_row["earliest_date"].date()))
         st.metric("Data End Date", str(summary_row["latest_date"].date()))
-        st.metric("Unique Quarters", int(summary_row["unique_quarters"]))
+        st.metric("Number of Quarters", int(summary_row["unique_quarters"]))
         st.metric("Number of Months", int(summary_row["unique_months"]))
         
     with col2:
-        st.metric("Unique Blocks", int(summary_row["unique_blocks"]))
-        st.metric("Unique Schools", int(summary_row["unique_schools"]))
-        st.metric("Unique Mentors", int(summary_row["unique_mentors"]))
+        st.metric("Number of Blocks", int(summary_row["unique_blocks"]))
+        st.metric("Number of Schools", int(summary_row["unique_schools"]))
+        st.metric("Number of Mentors", int(summary_row["unique_mentors"]))
         st.metric("Average Visits per Mentor", float(summary_row["avg_visits_per_mentor"]))
         st.metric("Average Visits per School", float(summary_row["avg_visits_per_school"]))
 
