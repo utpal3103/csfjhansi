@@ -18,7 +18,7 @@ def show():
     )
 
     # Connect
-    st.write("DB_PATH:", DB_PATH)
+    # st.write("DB_PATH:", DB_PATH)
     con = duckdb.connect(DB_PATH)
 
     # Key summary
