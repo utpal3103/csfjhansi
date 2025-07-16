@@ -9,6 +9,9 @@ data/*
 !data/interim/aggregation.duckdb
 !data/interim/enrichment.duckdb
 
+# Ignore everything in resources
+resources/*
+
 # Jupyter Notebooks
 *.ipynb
 notebooks/
