@@ -1,0 +1,8 @@
+{
+  "textFontFamily": "Courier New",
+  "interfaceFontFamily": "American Typewriter",
+  "monospaceFontFamily": "Courier New",
+  "baseFontSize": 13,
+  "baseFontSizeAction": true,
+  "cssTheme": "ProtocolBlue"
+}

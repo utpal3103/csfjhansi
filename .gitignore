@@ -1,0 +1,17 @@
+# Virtual environment
+.venv/
+
+# Jupyter Notebooks
+*.ipynb
+notebooks/
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+
+# macOS system files
+.DS_Store
+
+# Python cache
+__pycache__/
+*.py[cod]
