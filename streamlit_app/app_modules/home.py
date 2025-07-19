@@ -6,7 +6,7 @@ import plotly.express as px
 import os
 from pathlib import Path
 
-DB_PATH = Path("data/interim/aggregation.duckdb")
+DB_PATH = Path("data/interim/aggregation1.duckdb")
 
 def show():
     st.subheader("Key Indicators")

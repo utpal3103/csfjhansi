@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.express as px
 from pathlib import Path
 
-DB_PATH = Path("data/interim/aggregation.duckdb")
+DB_PATH = Path("data/interim/aggregation1.duckdb")
 
 def show():
     st.header("👨‍🏫 Mentor Dashboard")

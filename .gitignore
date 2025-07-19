@@ -6,7 +6,7 @@ data/*
 
 # But keep these DuckDB databases
 !data/interim/
-!data/interim/aggregation.duckdb
+!data/interim/aggregation1.duckdb
 !data/interim/enrichment.duckdb
 
 # Ignore all csv file in data/interim

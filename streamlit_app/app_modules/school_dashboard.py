@@ -5,13 +5,13 @@ import pandas as pd
 import plotly.express as px
 from pathlib import Path
 
-DB_PATH = Path("data/interim/aggregation.duckdb")
+DB_PATH = Path("data/interim/aggregation1.duckdb")
 
 def show():
     st.header("🏫 School Dashboard")
 
     # Select or enter UDISC code
-    con = duckdb.connect("DB_PATH")
+    con = duckdb.connect(DB_PATH)
 
     all_schools_df = con.execute("SELECT DISTINCT udise_code FROM school_identifiers_summary ORDER BY udise_code").fetchdf()
     udise_options = all_schools_df["udise_code"].tolist()
